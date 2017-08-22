@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="@dimen/OuterPadding"
+    android:paddingRight="@dimen/OuterPadding"
+    android:orientation="vertical"
     tools:context="com.jurtz.marcel.angrypomodoro.SettingsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <!-- Interval Length -->
+    <LinearLayout
+        style="@style/SettingsLayout">
+
+        <TextView
+            style="@style/SettingsTextView"
+            android:text="@string/lblPomodoroLength" />
+
+        <EditText
+            android:id="@+id/txtPomodoroLength"
+            style="@style/SettingsEditText"
+            android:text="@string/txtPomodoroLength" />
+    </LinearLayout>
+
+    <!-- Short Break Length -->
+    <LinearLayout
+        style="@style/SettingsLayout">
+
+        <TextView
+            style="@style/SettingsTextView"
+            android:text="@string/lblShortBreakLength" />
+
+        <EditText
+            android:id="@+id/txtShortBreakLength"
+            style="@style/SettingsEditText"
+            android:text="@string/txtShortBreakLength" />
+
+    </LinearLayout>
+
+    <!-- Long Break Length -->
+    <LinearLayout
+        style="@style/SettingsLayout">
+
+        <TextView
+            style="@style/SettingsTextView"
+            android:text="@string/lblLongBreakLength" />
+
+        <EditText
+            android:id="@+id/txtLongBreakLength"
+            style="@style/SettingsEditText"
+            android:text="@string/txtLongBreakLength" />
+
+    </LinearLayout>
+
+    <!-- Intervals Until Break -->
+    <LinearLayout
+        style="@style/SettingsLayout">
+
+        <TextView
+            style="@style/SettingsTextView"
+            android:text="@string/lblIntervalsUntilLongBreak" />
+
+        <EditText
+            android:id="@+id/txtIntervalsUntilLongBreak"
+            style="@style/SettingsEditText"
+            android:text="@string/txtIntervalsUntilLongBreak" />
+    </LinearLayout>
+
+    <!-- Amount Of Pomodoros -->
+    <LinearLayout
+        style="@style/SettingsLayout">
+
+        <TextView
+            style="@style/SettingsTextView"
+            android:text="@string/lblIntervalsToDo" />
+
+        <EditText
+            android:id="@+id/txtIntervalsToDo"
+            style="@style/SettingsEditText"
+            android:text="@string/txtIntervalsToDo" />
+
+    </LinearLayout>
+
+    <!-- Restrict App Usage -->
+    <LinearLayout
+        style="@style/SettingsLayout"
+        android:layout_gravity="center">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chkRestrictAppUsage"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
