@@ -19,6 +19,34 @@
         android:textSize="50sp"
         android:textStyle="bold" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/lblTimerMinutes"
+            android:text="@string/zero"
+            style="@style/largeTextView"
+            android:layout_toLeftOf="@id/lblColon"
+            android:layout_toStartOf="@id/lblColon"
+            android:layout_alignBaseline="@id/lblColon" />
+
+        <TextView
+            android:id="@+id/lblColon"
+            android:text="@string/colon"
+            style="@style/largeTextView"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/lblTimerSeconds"
+            android:text="@string/zero"
+            style="@style/smallTextView"
+            android:layout_alignBottom="@+id/lblTimerMinutes"
+            android:layout_toRightOf="@+id/lblColon"
+            android:layout_toEndOf="@+id/lblColon" />
+
+    </RelativeLayout>
+
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout
@@ -30,19 +58,12 @@
             android:id="@+id/fullscreen_content_controls"
             style="?metaButtonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom|center_horizontal"
             android:background="@color/black_overlay"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
 
         </LinearLayout>
     </FrameLayout>

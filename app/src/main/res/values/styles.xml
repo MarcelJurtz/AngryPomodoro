@@ -20,4 +20,18 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
+
+    <style name="defaultTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="smallTextView" parent="defaultTextView">
+        <item name="android:textSize">@dimen/fontSizeSmall</item>
+    </style>
+
+    <style name="largeTextView" parent="defaultTextView">
+        <item name="android:textSize">@dimen/fontSizeLarge</item>
+    </style>
+
 </resources>
