@@ -1,71 +1,31 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
     tools:context="com.jurtz.marcel.pomodorotimer.TimerView">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+
     <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:id="@+id/lblTimerMinutes"
+        style="@style/largeTextView"
+        android:layout_alignBaseline="@id/lblColon"
+        android:layout_toLeftOf="@id/lblColon"
+        android:layout_toStartOf="@id/lblColon"
+        android:text="@string/zero" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/lblColon"
+        style="@style/largeTextView"
+        android:layout_centerInParent="true"
+        android:text="@string/colon" />
 
-        <TextView
-            android:id="@+id/lblTimerMinutes"
-            android:text="@string/zero"
-            style="@style/largeTextView"
-            android:layout_toLeftOf="@id/lblColon"
-            android:layout_toStartOf="@id/lblColon"
-            android:layout_alignBaseline="@id/lblColon" />
+    <TextView
+        android:id="@+id/lblTimerSeconds"
+        style="@style/smallTextView"
+        android:layout_alignBottom="@+id/lblTimerMinutes"
+        android:layout_toEndOf="@+id/lblColon"
+        android:layout_toRightOf="@+id/lblColon"
+        android:text="@string/zero" />
 
-        <TextView
-            android:id="@+id/lblColon"
-            android:text="@string/colon"
-            style="@style/largeTextView"
-            android:layout_centerInParent="true" />
-
-        <TextView
-            android:id="@+id/lblTimerSeconds"
-            android:text="@string/zero"
-            style="@style/smallTextView"
-            android:layout_alignBottom="@+id/lblTimerMinutes"
-            android:layout_toRightOf="@+id/lblColon"
-            android:layout_toEndOf="@+id/lblColon" />
-
-    </RelativeLayout>
-
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
-
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-
-        </LinearLayout>
-    </FrameLayout>
-
-</FrameLayout>
+</RelativeLayout>
